@@ -67,12 +67,11 @@ public class Lista {
 	public void usunPierwszy(int usuwanyElement) {
 		for (int i = 0; i < liczby.length; i++) {
 			if (liczby[i] == usuwanyElement) {
-				for (int j = i; j < liczby.length - 1; j++) {
-					liczby[j] = liczby[j + 1];
-				}
+				przesunOjeden(i);
+				rozmiar = rozmiar - 1;
+				break;
 			}
 		}
-		rozmiar = rozmiar - 1;
 	}
 
 	private void przesunOjeden(int usuwanyIndex) {

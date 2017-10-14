@@ -26,6 +26,7 @@ public class ListaTest {
 		s.dodajElement(6);
 		s.dodajElement(7);
 		piszLn(s.dodajElement(8));
+		s.pish();
 		piszLn(s.dodajElement(9));
 		s.usunPierwszy(4);
 		s.pish();
