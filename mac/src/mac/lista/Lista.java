@@ -2,16 +2,16 @@ package mac.lista;
 
 public class Lista {
 	/**
-	 * Klasa ta ma mieæ nastêpuj¹ce pola prywatne:
+	 * Klasa ta ma mieÄ‡ nastÄ™pujÄ…ce pola prywatne:
 	 * 
 	 */
-	private int[] liczby; // – tablica, w której przechowywane bêd¹ liczby,
-	private int pojemnosc; // – maksymalna liczba elementów, mo¿liwych do przechowywania,
-	private int rozmiar; // – aktualna liczba przechowywanych elementów.
+	private int[] liczby; // â€“ tablica, w ktÃ³rej przechowywane bÄ™dÄ… liczby,
+	private int pojemnosc; // â€“ maksymalna liczba elementÃ³w, moÅ¼liwych do przechowywania,
+	private int rozmiar; // â€“ aktualna liczba przechowywanych elementÃ³w.
 
 	/**
-	 * • konstruktor z parametrem okreœlaj¹cym pojemnoœæ, który przydziela pamiêæ
-	 * dla tablicy liczby oraz ustala wartoœci pozosta³ych pól klasy;
+	 * â€¢ konstruktor z parametrem okreÅ›lajÄ…cym pojemnoÅ›Ä‡, ktÃ³ry przydziela pamiÄ™Ä‡
+	 * dla tablicy liczby oraz ustala wartoÅ›ci pozostaÅ‚ych pÃ³l klasy;
 	 */
 	Lista(int pojemnosc) {
 		liczby = new int[pojemnosc];
@@ -20,13 +20,13 @@ public class Lista {
 	}
 
 	/**
-	 * • metodê dodajElement , która przyjmuje dok³adnie jeden element – liczbê
-	 * ca³kowit¹, która dodawana jest do listy; w przypadku, gdy lista jest pe³na
-	 * powinien zostaæ wyœwietlony komunikat o b³êdzie;
+	 * â€¢ metodÄ™ dodajElement , ktÃ³ra przyjmuje dokÅ‚adnie jeden element â€“ liczbÄ™
+	 * caÅ‚kowitÄ…, ktÃ³ra dodawana jest do listy; w przypadku, gdy lista jest peÅ‚na
+	 * powinien zostaÄ‡ wyÅ›wietlony komunikat o bÅ‚Ä™dzie;
 	 */
 	public String dodajElement(int nowyElement) {
 		if (rozmiar >= pojemnosc) {
-			return "pe³na lista";
+			return "peÅ‚na lista";
 		}
 		liczby[rozmiar] = nowyElement;
 		rozmiar = rozmiar + 1;
@@ -34,9 +34,9 @@ public class Lista {
 	}
 
 	/**
-	 * • metodê znajdz , której jedynym parametrem powinna byæ szukana liczba,
-	 * natomiast wynikiem pozycja podanej liczby w liœcie (licz¹c od 0) lub -1, gdy
-	 * liczby nie ma na liœcie;
+	 * â€¢ metodÄ™ znajdz , ktÃ³rej jedynym parametrem powinna byÄ‡ szukana liczba,
+	 * natomiast wynikiem pozycja podanej liczby w liÅ›cie (liczÄ…c od 0) lub -1, gdy
+	 * liczby nie ma na liÅ›cie;
 	 */
 	public int znajdz(int szukanyElement) {
 		for (int i = 0; i < liczby.length; i++) {
@@ -48,8 +48,8 @@ public class Lista {
 	}
 
 	/**
-	 * • bezparametrow¹ metodê pisz , która wypisuje informacje o liœcie, w tym jej
-	 * rozmiar, pojemnoœæ oraz listê przechowywanych elementów;
+	 * â€¢ bezparametrowÄ… metodÄ™ pisz , ktÃ³ra wypisuje informacje o liÅ›cie, w tym jej
+	 * rozmiar, pojemnoÅ›Ä‡ oraz listÄ™ przechowywanych elementÃ³w;
 	 */
 	public void pish() {
 		for (int i = 0; i < rozmiar; i++) {
@@ -59,10 +59,10 @@ public class Lista {
 	}
 
 	/**
-	 * • metodê usunPierwszy , która usuwa pierwsze wyst¹pienie podanej jako
-	 * parametr liczby, je¿eli znajduje siê ona na liœcie, tzn. je¿eli podana liczba
-	 * wystêpuje wiêcej ni¿ jeden raz, to usuwane jest jedynie pierwsze jej
-	 * wyst¹pienie;
+	 * â€¢ metodÄ™ usunPierwszy , ktÃ³ra usuwa pierwsze wystÄ…pienie podanej jako
+	 * parametr liczby, jeÅ¼eli znajduje siÄ™ ona na liÅ›cie, tzn. jeÅ¼eli podana liczba
+	 * wystÄ™puje wiÄ™cej niÅ¼ jeden raz, to usuwane jest jedynie pierwsze jej
+	 * wystÄ…pienie;
 	 */
 	public void usunPierwszy(int usuwanyElement) {
 		for (int i = 0; i < liczby.length; i++) {
@@ -81,8 +81,8 @@ public class Lista {
 	}
 
 	/**
-	 * • metodê usunPowtorzenia , która usuwa wszystkie powtórzenia elementów na
-	 * liœcie, tzn. po jej wykonaniu na liœcie nie powinno byæ ¿adnych powtórzonych
+	 * â€¢ metodÄ™ usunPowtorzenia , ktÃ³ra usuwa wszystkie powtÃ³rzenia elementÃ³w na
+	 * liÅ›cie, tzn. po jej wykonaniu na liÅ›cie nie powinno byÄ‡ Å¼adnych powtÃ³rzonych
 	 * liczb;
 	 */
 	public void usunPowtorzenia() {
@@ -98,10 +98,16 @@ public class Lista {
 	}
 
 	/**
-	 * • metodê odwroc , która odwraca kolejnoœæ elementów przechowywanych na
-	 * liœcie;
+	 * â€¢ metodÄ™ odwroc , ktÃ³ra odwraca kolejnoÅ›Ä‡ elementÃ³w przechowywanych na
+	 * liÅ›cie;
 	 */
 	public void odwroc() {
-		;
+		int liczby1 []= new int[rozmiar];
+		int j = 0;
+		for( int i = liczby.length-1; i >=0; i--){
+			liczby[i]= liczby1[j];
+			j++;
+		}
+		liczby=liczby1;
 	}
 }
